@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+      }
+
+      .card {
+        position: relative;
+        width: 320px;
+        padding: 40px;
+        background-color: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: calc(-100% + 5px);
+        width: 100%;
+        height: 100%;
+        background-color: #ff56ac;
+        z-index: 1;
+        transition: 0.5s;
+      }
+      .card:hover::before {
+        bottom: 0;
+      }
+
+      .content {
+        position: relative;
+        color: #777;
+        z-index: 2;
+        transition: 0.5s;
+      }
+      .card:hover .content {
+        color: white;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      a {
+        margin-top: 10px;
+        font-size: 14px;
+        display: inline-block;
+        text-decoration: none;
+        color: #777;
+        padding: 6px 10px;
+        font-weight: 600;
+        background-color: white;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="content">
+        <h2>Lorem Ipsum</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          nihil illum repellat ex in! Vitae est voluptate quas atque asperiores
+          magni soluta, velit debitis similique fugiat. Cumque autem delectus
+          praesentium?
+        </p>
+        <a href="#">Lorem Ipsum</a>
+      </div>
+    </div>
+  </body>
+</html>
